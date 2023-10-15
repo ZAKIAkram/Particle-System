@@ -1,22 +1,25 @@
-##### usage :
+# Particle System in C++
+This project allows you to build and visualize particle systems using C++ and VTK files that can be visualied in Paraview
+## Usage :
+```sh
 mkdir build
 cd build
 cmake ..
+```
 
-il y'a 11 test dans le répértoire test, pour tester, il suffit d'ecrire la commande : 
+There are 11 tests in the 'test' directory. To run a test, you can use the command :
+```sh
+make <name_of_the_test>
+./test/<name_of_the_test>
+```
 
-make <nom_du_test>
+Among the 11 tests, there are 'google_tests,' and the names of GTests follow the format: <test_name>_test.cxx. 
+The other tests are regular tests. 
+The testCollision.cxx in the 'test' directory is the test that simulates lab 4, but it takes some time.
 
-puis l'éxecuter : 
-./test/<nom_du_test>
-
-Parmi les 11 tests, il y'a des : "google_tests", les noms des gtests sont de la forme : <nom_du_test>_test.cxx 
-les autres tests sont des tests normaux.
-Le test testCollision.cxx dans le répértoire test est le test qui fait la simulationdu lab 4. mais il prend du temps.
-
-Pour générer la documentation doxygen il faut effectuer la command suivante : 
-
-- cd doc
-- doxygen doxyfilerc
-
-Une documentation est générée dans le folder docu
+To generate the documentation, you can use the command:
+```sh
+cd doc
+doxygen doxyfilerc
+```
+There is already a generated documentation in the 'docu' directory
