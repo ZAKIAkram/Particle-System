@@ -1,0 +1,104 @@
+\hypertarget{Particle_8hxx}{}\doxysection{/home/killuamam/\+Documents/\+TP\+\_\+zakiak\+\_\+bourroua/bien/include/\+Particle.hxx File Reference}
+\label{Particle_8hxx}\index{/home/killuamam/Documents/TP\_zakiak\_bourroua/bien/include/Particle.hxx@{/home/killuamam/Documents/TP\_zakiak\_bourroua/bien/include/Particle.hxx}}
+
+
+a class to manipulate particles  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include \char`\"{}Vecteur.\+hxx\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classParticle}{Particle}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::uniform\+\_\+real\+\_\+distribution$<$ double $>$ \mbox{\hyperlink{Particle_8hxx_a3587af762fa171dedacc30408b5f6537}{dist1}} (0.\+0, 1.\+0)
+\item 
+int \mbox{\hyperlink{Particle_8hxx_a6218fe3edc7fe0d1c9e1d9a5fc1e91d5}{operator==}} (const \mbox{\hyperlink{classParticle}{Particle}} \&p1, const \mbox{\hyperlink{classParticle}{Particle}} \&p2)
+\item 
+void \mbox{\hyperlink{Particle_8hxx_a6a742e61a59515e8386a9c094735fb67}{Stormer\+Verlet}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \&particles, double t\+\_\+end, double dt)
+\item 
+double \mbox{\hyperlink{Particle_8hxx_a1d22af588b1d11ec929a75caf9767f06}{fast\+\_\+pow}} (double base, int exponent)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double \mbox{\hyperlink{Particle_8hxx_a596344e5a2992d2beec43b76a6294de0}{EPSILON}} = 5.\+0
+\item 
+const double \mbox{\hyperlink{Particle_8hxx_a7308de1c539806bb40375e1e87597e7d}{SIGMA}} = 1.\+0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+a class to manipulate particles 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Particle_8hxx_a3587af762fa171dedacc30408b5f6537}\label{Particle_8hxx_a3587af762fa171dedacc30408b5f6537}} 
+\index{Particle.hxx@{Particle.hxx}!dist1@{dist1}}
+\index{dist1@{dist1}!Particle.hxx@{Particle.hxx}}
+\doxysubsubsection{\texorpdfstring{dist1()}{dist1()}}
+{\footnotesize\ttfamily std\+::uniform\+\_\+real\+\_\+distribution$<$ double $>$ dist1 (\begin{DoxyParamCaption}\item[{0.}]{0,  }\item[{1.}]{0 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{Particle_8hxx_a1d22af588b1d11ec929a75caf9767f06}\label{Particle_8hxx_a1d22af588b1d11ec929a75caf9767f06}} 
+\index{Particle.hxx@{Particle.hxx}!fast\_pow@{fast\_pow}}
+\index{fast\_pow@{fast\_pow}!Particle.hxx@{Particle.hxx}}
+\doxysubsubsection{\texorpdfstring{fast\_pow()}{fast\_pow()}}
+{\footnotesize\ttfamily double fast\+\_\+pow (\begin{DoxyParamCaption}\item[{double}]{base,  }\item[{int}]{exponent }\end{DoxyParamCaption})}
+
+fast power function for integers, faster than the usual pow from \texorpdfstring{$<$}{<}math.\+h\texorpdfstring{$>$}{>} 
+\begin{DoxyParams}{Parameters}
+{\em base} & \\
+\hline
+{\em exponent} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of the operation base $^\wedge$ \{exponent\} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Particle_8hxx_a6218fe3edc7fe0d1c9e1d9a5fc1e91d5}\label{Particle_8hxx_a6218fe3edc7fe0d1c9e1d9a5fc1e91d5}} 
+\index{Particle.hxx@{Particle.hxx}!operator==@{operator==}}
+\index{operator==@{operator==}!Particle.hxx@{Particle.hxx}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily int operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classParticle}{Particle}} \&}]{p1,  }\item[{const \mbox{\hyperlink{classParticle}{Particle}} \&}]{p2 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{Particle_8hxx_a6a742e61a59515e8386a9c094735fb67}\label{Particle_8hxx_a6a742e61a59515e8386a9c094735fb67}} 
+\index{Particle.hxx@{Particle.hxx}!StormerVerlet@{StormerVerlet}}
+\index{StormerVerlet@{StormerVerlet}!Particle.hxx@{Particle.hxx}}
+\doxysubsubsection{\texorpdfstring{StormerVerlet()}{StormerVerlet()}}
+{\footnotesize\ttfamily void Stormer\+Verlet (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \&}]{particles,  }\item[{double}]{t\+\_\+end,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+Stromer\+Verlet implementation 
+\begin{DoxyParams}{Parameters}
+{\em particles} & \\
+\hline
+{\em t\+\_\+end} & \\
+\hline
+{\em dt} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{Particle_8hxx_a596344e5a2992d2beec43b76a6294de0}\label{Particle_8hxx_a596344e5a2992d2beec43b76a6294de0}} 
+\index{Particle.hxx@{Particle.hxx}!EPSILON@{EPSILON}}
+\index{EPSILON@{EPSILON}!Particle.hxx@{Particle.hxx}}
+\doxysubsubsection{\texorpdfstring{EPSILON}{EPSILON}}
+{\footnotesize\ttfamily const double EPSILON = 5.\+0}
+
+\mbox{\Hypertarget{Particle_8hxx_a7308de1c539806bb40375e1e87597e7d}\label{Particle_8hxx_a7308de1c539806bb40375e1e87597e7d}} 
+\index{Particle.hxx@{Particle.hxx}!SIGMA@{SIGMA}}
+\index{SIGMA@{SIGMA}!Particle.hxx@{Particle.hxx}}
+\doxysubsubsection{\texorpdfstring{SIGMA}{SIGMA}}
+{\footnotesize\ttfamily const double SIGMA = 1.\+0}
+

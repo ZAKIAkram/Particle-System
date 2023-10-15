@@ -1,0 +1,315 @@
+\hypertarget{classUnivers}{}\doxysection{Univers Class Reference}
+\label{classUnivers}\index{Univers@{Univers}}
+
+
+{\ttfamily \#include $<$Univers.\+hxx$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUnivers_a629b84fe1d3c0a858f883d24939bd2e9}{Univers}} (int dim, int nb\+\_\+particles)
+\item 
+\mbox{\hyperlink{classUnivers_a648608d34104cf6e0d199b858e5a5fbb}{Univers}} (int dim, int nb\+\_\+particles, const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \&particles)
+\item 
+\mbox{\hyperlink{classUnivers_afdf7174a8b3f047cac548dd2c68b971d}{Univers}} (int dim, int nb\+\_\+particles, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \&particles, \mbox{\hyperlink{classVecteur}{Vecteur}} Ld, double r\+\_\+cut, int type)
+\item 
+void \mbox{\hyperlink{classUnivers_af0c0bd46ed56af7e60681ff3aaa906ea}{compute\+\_\+all\+\_\+forces}} ()
+\item 
+void \mbox{\hyperlink{classUnivers_a0fdeda766de2e1092316bf66de3388a3}{compute\+\_\+all\+\_\+forces\+\_\+2}} ()
+\item 
+void \mbox{\hyperlink{classUnivers_a98a2e95cf933e0f4ba305181829773ad}{compute\+\_\+all\+\_\+forces\+\_\+1D}} ()
+\item 
+void \mbox{\hyperlink{classUnivers_a61d3ab178b07260d55d584bfadeb8dc2}{compute\+\_\+all\+\_\+forces\+\_\+2D}} ()
+\item 
+void \mbox{\hyperlink{classUnivers_aeb2b3b07ee199a8da1df55c95817a1db}{compute\+\_\+all\+\_\+forces\+\_\+3D}} ()
+\item 
+int \mbox{\hyperlink{classUnivers_a17705f19ac69c66bf2e2ea4e8e022697}{get\+Cell\+Index}} (\mbox{\hyperlink{classVecteur}{Vecteur}} \&position)
+\item 
+int \mbox{\hyperlink{classUnivers_ac98fcfc73663139959f003448c533b9b}{boundary\+\_\+hit}} (const \mbox{\hyperlink{classVecteur}{Vecteur}} \&position)
+\item 
+void \mbox{\hyperlink{classUnivers_a8405cc8cfedf484fd6603200035b760d}{handle\+\_\+reflections}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ \&p)
+\item 
+void \mbox{\hyperlink{classUnivers_aa72ae89bd11cb23dd7b58caa49cf0c37}{handle\+\_\+periodic\+\_\+mvt}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ \&p)
+\item 
+int \mbox{\hyperlink{classUnivers_ae972cf5d1cb37dba2eed8418d8451de8}{get\+Nb\+Particles}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classCell}{Cell}} $>$ \& \mbox{\hyperlink{classUnivers_adfccd6e8a20c1952c1903eb44e434b71}{get\+Grid}} ()
+\item 
+void \mbox{\hyperlink{classUnivers_a8e9aec7165d629b529f0f269d356e7a8}{move\+\_\+particle}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ p, int cell\+\_\+index\+\_\+src, int cell\+\_\+index\+\_\+dest)
+\item 
+void \mbox{\hyperlink{classUnivers_af253e186e6133357cce775188b80f898}{Stormer\+Verlet}} (double t\+\_\+end, double dt)
+\item 
+void \mbox{\hyperlink{classUnivers_aee301750db5406d7faebddcb8e028223}{print\+\_\+univers\+\_\+state\+\_\+in\+\_\+\+VTK}} (std\+::ofstream \&out)
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \& \mbox{\hyperlink{classUnivers_ab240bacc707a69a01dca63d03fc899c5}{get\+Particles}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classCell}{Cell}} $>$ \mbox{\hyperlink{classUnivers_a874219997374e1c9caf41e65def12b7f}{\+\_\+grid}}
+\item 
+int \mbox{\hyperlink{classUnivers_ab7c578a96444bf101662a93f1d8fcb13}{\+\_\+nb\+\_\+particles}}
+\item 
+int \mbox{\hyperlink{classUnivers_a529e4863f1cb2fe56d34887acd14adfa}{\+\_\+dim}}
+\item 
+\mbox{\hyperlink{classVecteur}{Vecteur}} \mbox{\hyperlink{classUnivers_a71db3f1f33bf91b6d54ef822bc94cbd4}{\+\_\+\+Ld}}
+\item 
+double \mbox{\hyperlink{classUnivers_a628b7f924010431e6f3a99e92b720fc5}{\+\_\+r\+\_\+cut}}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \mbox{\hyperlink{classUnivers_acbb45b940b4021db119321b15dba1b64}{\+\_\+particles}}
+\item 
+\mbox{\hyperlink{classVecteur}{Vecteur}} \mbox{\hyperlink{classUnivers_a273de85519995cec2848d21d2e5e74c1}{\+\_\+grid\+\_\+size}}
+\item 
+int \mbox{\hyperlink{classUnivers_af2f27701837feaaac594506468ef07a3}{\+\_\+size}}
+\item 
+int \mbox{\hyperlink{classUnivers_abfe768a32bdb2eb9062bb9bfa278ce49}{\+\_\+type}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classUnivers}{Univers}} class, contains a vector of particles, and is divided into a grid to lower the computations 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUnivers_a629b84fe1d3c0a858f883d24939bd2e9}\label{classUnivers_a629b84fe1d3c0a858f883d24939bd2e9}} 
+\index{Univers@{Univers}!Univers@{Univers}}
+\index{Univers@{Univers}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{Univers()}{Univers()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Univers\+::\+Univers (\begin{DoxyParamCaption}\item[{int}]{dim,  }\item[{int}]{nb\+\_\+particles }\end{DoxyParamCaption})}
+
+constructor of Universe, creates a random \mbox{\hyperlink{classUnivers}{Univers}} 
+\begin{DoxyParams}{Parameters}
+{\em dim} & number of dimensions \+: 1D, 2D or 3D \\
+\hline
+{\em nb\+\_\+particles} & number of particles in the univers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUnivers_a648608d34104cf6e0d199b858e5a5fbb}\label{classUnivers_a648608d34104cf6e0d199b858e5a5fbb}} 
+\index{Univers@{Univers}!Univers@{Univers}}
+\index{Univers@{Univers}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{Univers()}{Univers()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Univers\+::\+Univers (\begin{DoxyParamCaption}\item[{int}]{dim,  }\item[{int}]{nb\+\_\+particles,  }\item[{const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \&}]{particles }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUnivers_afdf7174a8b3f047cac548dd2c68b971d}\label{classUnivers_afdf7174a8b3f047cac548dd2c68b971d}} 
+\index{Univers@{Univers}!Univers@{Univers}}
+\index{Univers@{Univers}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{Univers()}{Univers()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Univers\+::\+Univers (\begin{DoxyParamCaption}\item[{int}]{dim,  }\item[{int}]{nb\+\_\+particles,  }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \&}]{particles,  }\item[{\mbox{\hyperlink{classVecteur}{Vecteur}}}]{Ld,  }\item[{double}]{r\+\_\+cut,  }\item[{int}]{type }\end{DoxyParamCaption})}
+
+creates a \mbox{\hyperlink{classUnivers}{Univers}} from the given particles vector, and place them in the grid 
+\begin{DoxyParams}{Parameters}
+{\em dim} & \\
+\hline
+{\em nb\+\_\+particles} & \\
+\hline
+{\em particles} & \\
+\hline
+{\em Ld} & \\
+\hline
+{\em r\+\_\+cut} & \\
+\hline
+{\em type} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUnivers_ac98fcfc73663139959f003448c533b9b}\label{classUnivers_ac98fcfc73663139959f003448c533b9b}} 
+\index{Univers@{Univers}!boundary\_hit@{boundary\_hit}}
+\index{boundary\_hit@{boundary\_hit}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{boundary\_hit()}{boundary\_hit()}}
+{\footnotesize\ttfamily int Univers\+::boundary\+\_\+hit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVecteur}{Vecteur}} \&}]{position }\end{DoxyParamCaption})}
+
+returns 1 if the particle hits a boundary, 0 if not 
+\begin{DoxyParams}{Parameters}
+{\em position} & position of the particle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUnivers_af0c0bd46ed56af7e60681ff3aaa906ea}\label{classUnivers_af0c0bd46ed56af7e60681ff3aaa906ea}} 
+\index{Univers@{Univers}!compute\_all\_forces@{compute\_all\_forces}}
+\index{compute\_all\_forces@{compute\_all\_forces}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{compute\_all\_forces()}{compute\_all\_forces()}}
+{\footnotesize\ttfamily void Univers\+::compute\+\_\+all\+\_\+forces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+computes all forces between particles in the universe, (without using the grid) \mbox{\Hypertarget{classUnivers_a98a2e95cf933e0f4ba305181829773ad}\label{classUnivers_a98a2e95cf933e0f4ba305181829773ad}} 
+\index{Univers@{Univers}!compute\_all\_forces\_1D@{compute\_all\_forces\_1D}}
+\index{compute\_all\_forces\_1D@{compute\_all\_forces\_1D}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{compute\_all\_forces\_1D()}{compute\_all\_forces\_1D()}}
+{\footnotesize\ttfamily void Univers\+::compute\+\_\+all\+\_\+forces\+\_\+1D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+computes the forces if the dimension of the Universe is 1, we compute the interactions only between neighbor cells \mbox{\Hypertarget{classUnivers_a0fdeda766de2e1092316bf66de3388a3}\label{classUnivers_a0fdeda766de2e1092316bf66de3388a3}} 
+\index{Univers@{Univers}!compute\_all\_forces\_2@{compute\_all\_forces\_2}}
+\index{compute\_all\_forces\_2@{compute\_all\_forces\_2}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{compute\_all\_forces\_2()}{compute\_all\_forces\_2()}}
+{\footnotesize\ttfamily void Univers\+::compute\+\_\+all\+\_\+forces\+\_\+2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Computes the forces for every dimension \mbox{\Hypertarget{classUnivers_a61d3ab178b07260d55d584bfadeb8dc2}\label{classUnivers_a61d3ab178b07260d55d584bfadeb8dc2}} 
+\index{Univers@{Univers}!compute\_all\_forces\_2D@{compute\_all\_forces\_2D}}
+\index{compute\_all\_forces\_2D@{compute\_all\_forces\_2D}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{compute\_all\_forces\_2D()}{compute\_all\_forces\_2D()}}
+{\footnotesize\ttfamily void Univers\+::compute\+\_\+all\+\_\+forces\+\_\+2D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+computes the forces of interactions if the dimension of the universe is 2 \mbox{\Hypertarget{classUnivers_aeb2b3b07ee199a8da1df55c95817a1db}\label{classUnivers_aeb2b3b07ee199a8da1df55c95817a1db}} 
+\index{Univers@{Univers}!compute\_all\_forces\_3D@{compute\_all\_forces\_3D}}
+\index{compute\_all\_forces\_3D@{compute\_all\_forces\_3D}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{compute\_all\_forces\_3D()}{compute\_all\_forces\_3D()}}
+{\footnotesize\ttfamily void Univers\+::compute\+\_\+all\+\_\+forces\+\_\+3D (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+computes the forces applied to the particles in a 3D Universe \mbox{\Hypertarget{classUnivers_a17705f19ac69c66bf2e2ea4e8e022697}\label{classUnivers_a17705f19ac69c66bf2e2ea4e8e022697}} 
+\index{Univers@{Univers}!getCellIndex@{getCellIndex}}
+\index{getCellIndex@{getCellIndex}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{getCellIndex()}{getCellIndex()}}
+{\footnotesize\ttfamily int Univers\+::get\+Cell\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVecteur}{Vecteur}} \&}]{position }\end{DoxyParamCaption})}
+
+returns the index of the cell of the particle 
+\begin{DoxyParams}{Parameters}
+{\em position} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cell index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUnivers_adfccd6e8a20c1952c1903eb44e434b71}\label{classUnivers_adfccd6e8a20c1952c1903eb44e434b71}} 
+\index{Univers@{Univers}!getGrid@{getGrid}}
+\index{getGrid@{getGrid}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{getGrid()}{getGrid()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classCell}{Cell}} $>$ \& Univers\+::get\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUnivers_ae972cf5d1cb37dba2eed8418d8451de8}\label{classUnivers_ae972cf5d1cb37dba2eed8418d8451de8}} 
+\index{Univers@{Univers}!getNbParticles@{getNbParticles}}
+\index{getNbParticles@{getNbParticles}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{getNbParticles()}{getNbParticles()}}
+{\footnotesize\ttfamily int Univers\+::get\+Nb\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUnivers_ab240bacc707a69a01dca63d03fc899c5}\label{classUnivers_ab240bacc707a69a01dca63d03fc899c5}} 
+\index{Univers@{Univers}!getParticles@{getParticles}}
+\index{getParticles@{getParticles}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{getParticles()}{getParticles()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \& Univers\+::get\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classUnivers_aa72ae89bd11cb23dd7b58caa49cf0c37}\label{classUnivers_aa72ae89bd11cb23dd7b58caa49cf0c37}} 
+\index{Univers@{Univers}!handle\_periodic\_mvt@{handle\_periodic\_mvt}}
+\index{handle\_periodic\_mvt@{handle\_periodic\_mvt}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{handle\_periodic\_mvt()}{handle\_periodic\_mvt()}}
+{\footnotesize\ttfamily void Univers\+::handle\+\_\+periodic\+\_\+mvt (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ \&}]{p }\end{DoxyParamCaption})}
+
+handler of periodic movement of particles 
+\begin{DoxyParams}{Parameters}
+{\em p} & particle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUnivers_a8405cc8cfedf484fd6603200035b760d}\label{classUnivers_a8405cc8cfedf484fd6603200035b760d}} 
+\index{Univers@{Univers}!handle\_reflections@{handle\_reflections}}
+\index{handle\_reflections@{handle\_reflections}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{handle\_reflections()}{handle\_reflections()}}
+{\footnotesize\ttfamily void Univers\+::handle\+\_\+reflections (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ \&}]{p }\end{DoxyParamCaption})}
+
+handler of the reflections, it changes the direction of the movement if the particle hits a boundary 
+\begin{DoxyParams}{Parameters}
+{\em p} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUnivers_a8e9aec7165d629b529f0f269d356e7a8}\label{classUnivers_a8e9aec7165d629b529f0f269d356e7a8}} 
+\index{Univers@{Univers}!move\_particle@{move\_particle}}
+\index{move\_particle@{move\_particle}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{move\_particle()}{move\_particle()}}
+{\footnotesize\ttfamily void Univers\+::move\+\_\+particle (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$}]{p,  }\item[{int}]{cell\+\_\+index\+\_\+src,  }\item[{int}]{cell\+\_\+index\+\_\+dest }\end{DoxyParamCaption})}
+
+moves a particle from one cell to another 
+\begin{DoxyParams}{Parameters}
+{\em p} & particle to move \\
+\hline
+{\em cell\+\_\+index\+\_\+src} & the index of the source cell \\
+\hline
+{\em cell\+\_\+index\+\_\+dest} & the index of the destination cell \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUnivers_aee301750db5406d7faebddcb8e028223}\label{classUnivers_aee301750db5406d7faebddcb8e028223}} 
+\index{Univers@{Univers}!print\_univers\_state\_in\_VTK@{print\_univers\_state\_in\_VTK}}
+\index{print\_univers\_state\_in\_VTK@{print\_univers\_state\_in\_VTK}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{print\_univers\_state\_in\_VTK()}{print\_univers\_state\_in\_VTK()}}
+{\footnotesize\ttfamily void Univers\+::print\+\_\+univers\+\_\+state\+\_\+in\+\_\+\+VTK (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out }\end{DoxyParamCaption})}
+
+prints the state of the universe (the position of the particles and their velocities) ina VTK file so we can visualize the universe in PARAVIEW 
+\begin{DoxyParams}{Parameters}
+{\em out} & the file where we want to write \mbox{\hyperlink{classUnivers}{Univers}} state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUnivers_af253e186e6133357cce775188b80f898}\label{classUnivers_af253e186e6133357cce775188b80f898}} 
+\index{Univers@{Univers}!StormerVerlet@{StormerVerlet}}
+\index{StormerVerlet@{StormerVerlet}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{StormerVerlet()}{StormerVerlet()}}
+{\footnotesize\ttfamily void Univers\+::\+Stormer\+Verlet (\begin{DoxyParamCaption}\item[{double}]{t\+\_\+end,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+Stormer\+Verlet algorithm that simulates the movements of the particles in a univers 
+\begin{DoxyParams}{Parameters}
+{\em t\+\_\+end} & end date of the simulation in secondes \\
+\hline
+{\em dt} & the step \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classUnivers_a529e4863f1cb2fe56d34887acd14adfa}\label{classUnivers_a529e4863f1cb2fe56d34887acd14adfa}} 
+\index{Univers@{Univers}!\_dim@{\_dim}}
+\index{\_dim@{\_dim}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{\_dim}{\_dim}}
+{\footnotesize\ttfamily int Univers\+::\+\_\+dim\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classUnivers_a874219997374e1c9caf41e65def12b7f}\label{classUnivers_a874219997374e1c9caf41e65def12b7f}} 
+\index{Univers@{Univers}!\_grid@{\_grid}}
+\index{\_grid@{\_grid}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{\_grid}{\_grid}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classCell}{Cell}}$>$ Univers\+::\+\_\+grid\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classUnivers_a273de85519995cec2848d21d2e5e74c1}\label{classUnivers_a273de85519995cec2848d21d2e5e74c1}} 
+\index{Univers@{Univers}!\_grid\_size@{\_grid\_size}}
+\index{\_grid\_size@{\_grid\_size}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{\_grid\_size}{\_grid\_size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVecteur}{Vecteur}} Univers\+::\+\_\+grid\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classUnivers_a71db3f1f33bf91b6d54ef822bc94cbd4}\label{classUnivers_a71db3f1f33bf91b6d54ef822bc94cbd4}} 
+\index{Univers@{Univers}!\_Ld@{\_Ld}}
+\index{\_Ld@{\_Ld}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{\_Ld}{\_Ld}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVecteur}{Vecteur}} Univers\+::\+\_\+\+Ld\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classUnivers_ab7c578a96444bf101662a93f1d8fcb13}\label{classUnivers_ab7c578a96444bf101662a93f1d8fcb13}} 
+\index{Univers@{Univers}!\_nb\_particles@{\_nb\_particles}}
+\index{\_nb\_particles@{\_nb\_particles}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{\_nb\_particles}{\_nb\_particles}}
+{\footnotesize\ttfamily int Univers\+::\+\_\+nb\+\_\+particles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classUnivers_acbb45b940b4021db119321b15dba1b64}\label{classUnivers_acbb45b940b4021db119321b15dba1b64}} 
+\index{Univers@{Univers}!\_particles@{\_particles}}
+\index{\_particles@{\_particles}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{\_particles}{\_particles}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classParticle}{Particle}}$>$ $>$ Univers\+::\+\_\+particles\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classUnivers_a628b7f924010431e6f3a99e92b720fc5}\label{classUnivers_a628b7f924010431e6f3a99e92b720fc5}} 
+\index{Univers@{Univers}!\_r\_cut@{\_r\_cut}}
+\index{\_r\_cut@{\_r\_cut}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{\_r\_cut}{\_r\_cut}}
+{\footnotesize\ttfamily double Univers\+::\+\_\+r\+\_\+cut\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classUnivers_af2f27701837feaaac594506468ef07a3}\label{classUnivers_af2f27701837feaaac594506468ef07a3}} 
+\index{Univers@{Univers}!\_size@{\_size}}
+\index{\_size@{\_size}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{\_size}{\_size}}
+{\footnotesize\ttfamily int Univers\+::\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classUnivers_abfe768a32bdb2eb9062bb9bfa278ce49}\label{classUnivers_abfe768a32bdb2eb9062bb9bfa278ce49}} 
+\index{Univers@{Univers}!\_type@{\_type}}
+\index{\_type@{\_type}!Univers@{Univers}}
+\doxysubsubsection{\texorpdfstring{\_type}{\_type}}
+{\footnotesize\ttfamily int Univers\+::\+\_\+type\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/killuamam/\+Documents/\+TP\+\_\+zakiak\+\_\+bourroua/bien/include/\mbox{\hyperlink{Univers_8hxx}{Univers.\+hxx}}\item 
+/home/killuamam/\+Documents/\+TP\+\_\+zakiak\+\_\+bourroua/bien/src/\mbox{\hyperlink{Univers_8cxx}{Univers.\+cxx}}\end{DoxyCompactItemize}

@@ -1,0 +1,76 @@
+\hypertarget{Particle_8hxx_source}{}\doxysection{Particle.\+hxx}
+\label{Particle_8hxx_source}\index{/home/killuamam/Documents/TP\_zakiak\_bourroua/bien/include/Particle.hxx@{/home/killuamam/Documents/TP\_zakiak\_bourroua/bien/include/Particle.hxx}}
+\mbox{\hyperlink{Particle_8hxx}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Vecteur_8hxx}{Vecteur.hxx}}"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{const} \textcolor{keywordtype}{double}  \mbox{\hyperlink{Particle_8hxx_a596344e5a2992d2beec43b76a6294de0}{EPSILON}} = 5.0;}
+\DoxyCodeLine{20 \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{Particle_8hxx_a7308de1c539806bb40375e1e87597e7d}{SIGMA}} = 1.0 ;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{inline} std::uniform\_real\_distribution<double> \mbox{\hyperlink{Particle_8hxx_a3587af762fa171dedacc30408b5f6537}{dist1}}(0.0, 1.0);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{27 \textcolor{keyword}{class }\mbox{\hyperlink{classParticle}{Particle}}\{}
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \textcolor{keyword}{static} \textcolor{keywordtype}{int} \mbox{\hyperlink{classParticle_a6081e5170436371b1f9a31b2cdf42701}{count}};}
+\DoxyCodeLine{30     \mbox{\hyperlink{classParticle_ae4b54cd6b14b7bba43c5a481f5977a76}{Particle}}(\textcolor{keywordtype}{int} dim);}
+\DoxyCodeLine{31     \mbox{\hyperlink{classParticle_ae4b54cd6b14b7bba43c5a481f5977a76}{Particle}}(\textcolor{keywordtype}{int} dim, \textcolor{keywordtype}{double} position[], \textcolor{keywordtype}{double} vitesse[], \textcolor{keywordtype}{double} masse, \textcolor{keyword}{const} std::string \&categorie);}
+\DoxyCodeLine{32     \mbox{\hyperlink{classParticle_af08bcd11fb4cf9e7132c6595d4cac84f}{Particle}}(\textcolor{keywordtype}{int} dim, \textcolor{keyword}{const} \mbox{\hyperlink{classVecteur}{Vecteur}} \&position, \textcolor{keyword}{const} \mbox{\hyperlink{classVecteur}{Vecteur}} \&vitesse, \textcolor{keywordtype}{double} masse,}
+\DoxyCodeLine{33                        \textcolor{keyword}{const} std::string \&categorie, \textcolor{keyword}{const} \mbox{\hyperlink{classVecteur}{Vecteur}} \&force);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_ac508869fd719d822acef31bdab5d656a}{printParticle}}();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{double} \mbox{\hyperlink{classParticle_a37122da370f028c28231fc61e568343f}{distance}}(\mbox{\hyperlink{classParticle}{Particle}}\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{36     \mbox{\hyperlink{classVecteur}{Vecteur}} \mbox{\hyperlink{classParticle_a8920f7887c2bf705ce8af6a1020dfdc6}{compute\_force}}(\textcolor{keyword}{const} std::shared\_ptr<Particle>\& other) \textcolor{keyword}{const};}
+\DoxyCodeLine{37     \mbox{\hyperlink{classVecteur}{Vecteur}} \mbox{\hyperlink{classParticle_a42eeee0668dbd1e2da537ef9ba8faeeb}{compute\_force\_2}}(\textcolor{keyword}{const} std::shared\_ptr<Particle>\& other, \textcolor{keywordtype}{double} r\_cut) \textcolor{keyword}{const};}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a2eaa73a68b911bb364c4c09dbf47ce06}{compute\_all\_forces}}(std::vector<std::shared\_ptr<Particle>>\& particles);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a7a6fc3e55fa9cc26a0ac59f04fe6168d}{update\_position}}(\textcolor{keywordtype}{double} dt);}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a8000555c3980eddbe21ea1aa005bf6bc}{update\_vitesse}}(\textcolor{keywordtype}{double} dt);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_aa50e5f8aaffcbeee2db8d039ec408c9a}{update\_old\_force}}();}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a7113eb2ff5e833834cd7c6b75be10844}{reset\_force}}();}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_ae19031c87b0b590b028720d8f65b842f}{reset\_old\_force}}();}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a63885426be4b68d194dbcdca7306c657}{reset\_cumulative\_force}}();}
+\DoxyCodeLine{45     \textcolor{comment}{// Vecteur compute\_force2(const Particle\& other) const;}}
+\DoxyCodeLine{46     \mbox{\hyperlink{classVecteur}{Vecteur}}\& \mbox{\hyperlink{classParticle_abd84211ca24ff2144254c1fdb8e79463}{getPosition}}();}
+\DoxyCodeLine{47     \mbox{\hyperlink{classVecteur}{Vecteur}}\& \mbox{\hyperlink{classParticle_af07e1b8e99208ab9510b409a4a5f875d}{getVitesse}}();}
+\DoxyCodeLine{48     \textcolor{keywordtype}{double} \mbox{\hyperlink{classParticle_affa84f89b76a26e03c579208f4f43854}{getMasse}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a9d9c305e4934afbf5af952145bc917e8}{setPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classVecteur}{Vecteur}}\& position);}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a14a564fdee08b7666ea7283106aca4d6}{setVitesse}}(\textcolor{keyword}{const} \mbox{\hyperlink{classVecteur}{Vecteur}} \&vitesse);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a21d3c47a414bb5e2e1f4cb3fd0662514}{setMasse}}(\textcolor{keywordtype}{double} masse);}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a7322aa45a52265d752274a5dbb3be24e}{setCategorie}}(\textcolor{keyword}{const} std::string \&categorie);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a9f61a67935c2f36106cb54b4f7c2f74e}{setForce}}(\textcolor{keyword}{const} \mbox{\hyperlink{classVecteur}{Vecteur}} \&force);}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a95c7c4eed9f3b0ee57be730de06e2da8}{setOldForce}}(\textcolor{keyword}{const} \mbox{\hyperlink{classVecteur}{Vecteur}} \&force);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{int} \mbox{\hyperlink{classParticle_a4954712615601a01f84567b0768b4c0c}{getId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{56     std::string \&\mbox{\hyperlink{classParticle_a5b3402e58cd87c46eb1f286d3da5d92b}{getCategorie}}();}
+\DoxyCodeLine{57     \mbox{\hyperlink{classVecteur}{Vecteur}} \&\mbox{\hyperlink{classParticle_a9238aef8c899272b11ce5f720fd97aa3}{getForce}}();}
+\DoxyCodeLine{58     \mbox{\hyperlink{classVecteur}{Vecteur}} \&\mbox{\hyperlink{classParticle_ace24d0b1d200c5be36b7102ed28d905c}{getOldForce}}();}
+\DoxyCodeLine{59     \mbox{\hyperlink{classVecteur}{Vecteur}} \&\mbox{\hyperlink{classParticle_ac1859dd7b5d16439b9ce24cd90dc05e0}{getCumulativeForce}}();}
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{classParticle_a68bd20dc08f6cf6b1fe637a12ab6bfae}{setCumulativeForce}}(\textcolor{keyword}{const} \mbox{\hyperlink{classVecteur}{Vecteur}}\&);}
+\DoxyCodeLine{61 \textcolor{keyword}{private}:}
+\DoxyCodeLine{62     \textcolor{keywordtype}{int} \mbox{\hyperlink{classParticle_a44ff9cdd45c6f3ff6092d41a8b4ad58d}{\_dim}};}
+\DoxyCodeLine{63     \mbox{\hyperlink{classVecteur}{Vecteur}} \mbox{\hyperlink{classParticle_a44e292e0d59aba96502803cbeb63e2a4}{\_position}};}
+\DoxyCodeLine{64     \mbox{\hyperlink{classVecteur}{Vecteur}} \mbox{\hyperlink{classParticle_ab1f3d38161721409dbc5bf02c5c068c4}{\_vitesse}};}
+\DoxyCodeLine{65     \textcolor{keywordtype}{double} \mbox{\hyperlink{classParticle_addf376666a579d7590dc23b8aff08e72}{\_masse}};}
+\DoxyCodeLine{66     \textcolor{keywordtype}{int} \mbox{\hyperlink{classParticle_a62c56e45b40a87d0ff8e7959209f4811}{\_id}};}
+\DoxyCodeLine{67     std::string \mbox{\hyperlink{classParticle_af12182e9f32ea15da05e79fea4346c20}{\_categorie}};}
+\DoxyCodeLine{68     \mbox{\hyperlink{classVecteur}{Vecteur}} \mbox{\hyperlink{classParticle_a0d6f1a07f8bb3899d3c63f9d72f72b3f}{\_force}};}
+\DoxyCodeLine{69     \mbox{\hyperlink{classVecteur}{Vecteur}} \mbox{\hyperlink{classParticle_a32c98cd659aef146cea297973c781704}{\_old\_force}};}
+\DoxyCodeLine{70     \mbox{\hyperlink{classVecteur}{Vecteur}} \mbox{\hyperlink{classParticle_a9e60b46f0040ff395daf474019733101}{\_cumulative\_force}}; \textcolor{comment}{//algorithmic purpose}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{classParticle_a6081e5170436371b1f9a31b2cdf42701}{Particle::count}} = 0;}
+\DoxyCodeLine{75 \textcolor{keywordtype}{int} \mbox{\hyperlink{Particle_8hxx_a6218fe3edc7fe0d1c9e1d9a5fc1e91d5}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classParticle}{Particle}}\& p1, \textcolor{keyword}{const} \mbox{\hyperlink{classParticle}{Particle}}\& p2);}
+\DoxyCodeLine{76 \textcolor{keywordtype}{void} \mbox{\hyperlink{Particle_8hxx_a6a742e61a59515e8386a9c094735fb67}{StormerVerlet}}(std::vector<std::shared\_ptr<Particle>> \& particles, \textcolor{keywordtype}{double} t\_end, \textcolor{keywordtype}{double} dt);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{keywordtype}{double} \mbox{\hyperlink{Particle_8hxx_a1d22af588b1d11ec929a75caf9767f06}{fast\_pow}}(\textcolor{keywordtype}{double} base, \textcolor{keywordtype}{int} exponent);}
+
+\end{DoxyCode}

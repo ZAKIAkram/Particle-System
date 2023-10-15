@@ -1,0 +1,96 @@
+\hypertarget{classCell}{}\doxysection{Cell Class Reference}
+\label{classCell}\index{Cell@{Cell}}
+
+
+{\ttfamily \#include $<$Cell.\+hxx$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCell_a394510643e8664cf12b5efaf5cb99f71}{Cell}} ()
+\item 
+void \mbox{\hyperlink{classCell_abda075a5e9a3ed48c85500a58e4a6eeb}{insert\+\_\+particle}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ particle)
+\item 
+void \mbox{\hyperlink{classCell_aa7b88292726f0cf717c787666a05feff}{remove\+\_\+particle}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ particle)
+\item 
+std\+::set$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \& \mbox{\hyperlink{classCell_a888b1183d5f86d3239085dc8ffa53b58}{get\+Particles}} ()
+\item 
+int \mbox{\hyperlink{classCell_a293706c089ee7fd2d99704de5575f5a4}{get\+Nb\+Particles}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classCell_a3b4622f3755d85d61318dd409c85c6ba}{\+\_\+nb\+\_\+particles}} = 0
+\item 
+std\+::set$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \mbox{\hyperlink{classCell_abd126b32b37f28dadfff49a0fbd18625}{\+\_\+particles}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classCell}{Cell}} class, contains a set of particles 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCell_a394510643e8664cf12b5efaf5cb99f71}\label{classCell_a394510643e8664cf12b5efaf5cb99f71}} 
+\index{Cell@{Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{Cell()}{Cell()}}
+{\footnotesize\ttfamily Cell\+::\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCell_a293706c089ee7fd2d99704de5575f5a4}\label{classCell_a293706c089ee7fd2d99704de5575f5a4}} 
+\index{Cell@{Cell}!getNbParticles@{getNbParticles}}
+\index{getNbParticles@{getNbParticles}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{getNbParticles()}{getNbParticles()}}
+{\footnotesize\ttfamily int Cell\+::get\+Nb\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCell_a888b1183d5f86d3239085dc8ffa53b58}\label{classCell_a888b1183d5f86d3239085dc8ffa53b58}} 
+\index{Cell@{Cell}!getParticles@{getParticles}}
+\index{getParticles@{getParticles}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{getParticles()}{getParticles()}}
+{\footnotesize\ttfamily std\+::set$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$ $>$ \& Cell\+::get\+Particles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classCell_abda075a5e9a3ed48c85500a58e4a6eeb}\label{classCell_abda075a5e9a3ed48c85500a58e4a6eeb}} 
+\index{Cell@{Cell}!insert\_particle@{insert\_particle}}
+\index{insert\_particle@{insert\_particle}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{insert\_particle()}{insert\_particle()}}
+{\footnotesize\ttfamily void Cell\+::insert\+\_\+particle (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$}]{particle }\end{DoxyParamCaption})}
+
+inserts a particle in the cell 
+\begin{DoxyParams}{Parameters}
+{\em particle} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCell_aa7b88292726f0cf717c787666a05feff}\label{classCell_aa7b88292726f0cf717c787666a05feff}} 
+\index{Cell@{Cell}!remove\_particle@{remove\_particle}}
+\index{remove\_particle@{remove\_particle}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{remove\_particle()}{remove\_particle()}}
+{\footnotesize\ttfamily void Cell\+::remove\+\_\+particle (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classParticle}{Particle}} $>$}]{particle }\end{DoxyParamCaption})}
+
+Removes a particle from the cell 
+\begin{DoxyParams}{Parameters}
+{\em particle} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classCell_a3b4622f3755d85d61318dd409c85c6ba}\label{classCell_a3b4622f3755d85d61318dd409c85c6ba}} 
+\index{Cell@{Cell}!\_nb\_particles@{\_nb\_particles}}
+\index{\_nb\_particles@{\_nb\_particles}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{\_nb\_particles}{\_nb\_particles}}
+{\footnotesize\ttfamily int Cell\+::\+\_\+nb\+\_\+particles = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classCell_abd126b32b37f28dadfff49a0fbd18625}\label{classCell_abd126b32b37f28dadfff49a0fbd18625}} 
+\index{Cell@{Cell}!\_particles@{\_particles}}
+\index{\_particles@{\_particles}!Cell@{Cell}}
+\doxysubsubsection{\texorpdfstring{\_particles}{\_particles}}
+{\footnotesize\ttfamily std\+::set$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classParticle}{Particle}}$>$ $>$ Cell\+::\+\_\+particles\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/killuamam/\+Documents/\+TP\+\_\+zakiak\+\_\+bourroua/bien/include/\mbox{\hyperlink{Cell_8hxx}{Cell.\+hxx}}\item 
+/home/killuamam/\+Documents/\+TP\+\_\+zakiak\+\_\+bourroua/bien/src/\mbox{\hyperlink{Cell_8cxx}{Cell.\+cxx}}\end{DoxyCompactItemize}

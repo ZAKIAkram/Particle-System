@@ -1,0 +1,53 @@
+\hypertarget{Univers_8hxx_source}{}\doxysection{Univers.\+hxx}
+\label{Univers_8hxx_source}\index{/home/killuamam/Documents/TP\_zakiak\_bourroua/bien/include/Univers.hxx@{/home/killuamam/Documents/TP\_zakiak\_bourroua/bien/include/Univers.hxx}}
+\mbox{\hyperlink{Univers_8hxx}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Particle_8hxx}{Particle.hxx}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Cell_8hxx}{Cell.hxx}}"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define VTK 1}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define FPS 30}}
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classUnivers}{Univers}}\{}
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23 \textcolor{comment}{//TODO : \_grid private }}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \mbox{\hyperlink{classUnivers_a629b84fe1d3c0a858f883d24939bd2e9}{Univers}}(\textcolor{keywordtype}{int} dim, \textcolor{keywordtype}{int} nb\_particles);}
+\DoxyCodeLine{26     \mbox{\hyperlink{classUnivers_a629b84fe1d3c0a858f883d24939bd2e9}{Univers}}(\textcolor{keywordtype}{int} dim, \textcolor{keywordtype}{int} nb\_particles, \textcolor{keyword}{const} std::vector<std::shared\_ptr<Particle>> \&particles);}
+\DoxyCodeLine{27     \mbox{\hyperlink{classUnivers_a629b84fe1d3c0a858f883d24939bd2e9}{Univers}}(\textcolor{keywordtype}{int} dim, \textcolor{keywordtype}{int} nb\_particles,std::vector<std::shared\_ptr<Particle>>\& particles, \mbox{\hyperlink{classVecteur}{Vecteur}} Ld, \textcolor{keywordtype}{double} r\_cut, \textcolor{keywordtype}{int} type);}
+\DoxyCodeLine{28     \textcolor{comment}{// void place\_particle(const Particle\& particle);}}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnivers_af0c0bd46ed56af7e60681ff3aaa906ea}{compute\_all\_forces}}();}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnivers_a0fdeda766de2e1092316bf66de3388a3}{compute\_all\_forces\_2}}();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnivers_a98a2e95cf933e0f4ba305181829773ad}{compute\_all\_forces\_1D}}();}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnivers_a61d3ab178b07260d55d584bfadeb8dc2}{compute\_all\_forces\_2D}}();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnivers_aeb2b3b07ee199a8da1df55c95817a1db}{compute\_all\_forces\_3D}}();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnivers_a17705f19ac69c66bf2e2ea4e8e022697}{getCellIndex}}(\mbox{\hyperlink{classVecteur}{Vecteur}}\& position);}
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnivers_ac98fcfc73663139959f003448c533b9b}{boundary\_hit}}(\textcolor{keyword}{const} \mbox{\hyperlink{classVecteur}{Vecteur}}\& position);}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnivers_a8405cc8cfedf484fd6603200035b760d}{handle\_reflections}}(std::shared\_ptr<Particle> \& p);}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnivers_aa72ae89bd11cb23dd7b58caa49cf0c37}{handle\_periodic\_mvt}}(std::shared\_ptr<Particle>\& p);}
+\DoxyCodeLine{38     \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnivers_ae972cf5d1cb37dba2eed8418d8451de8}{getNbParticles}}();}
+\DoxyCodeLine{39     std::vector<Cell>\& \mbox{\hyperlink{classUnivers_adfccd6e8a20c1952c1903eb44e434b71}{getGrid}}();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnivers_a8e9aec7165d629b529f0f269d356e7a8}{move\_particle}}(std::shared\_ptr<Particle> p, \textcolor{keywordtype}{int} cell\_index\_src, \textcolor{keywordtype}{int} cell\_index\_dest);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnivers_af253e186e6133357cce775188b80f898}{StormerVerlet}}(\textcolor{keywordtype}{double} t\_end, \textcolor{keywordtype}{double} dt);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{classUnivers_aee301750db5406d7faebddcb8e028223}{print\_univers\_state\_in\_VTK}}(std::ofstream\& out);}
+\DoxyCodeLine{43     std::vector<std::shared\_ptr<Particle>> \&\mbox{\hyperlink{classUnivers_ab240bacc707a69a01dca63d03fc899c5}{getParticles}}();}
+\DoxyCodeLine{44 \textcolor{keyword}{private}:}
+\DoxyCodeLine{45     std::vector<Cell> \mbox{\hyperlink{classUnivers_a874219997374e1c9caf41e65def12b7f}{\_grid}};}
+\DoxyCodeLine{46     \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnivers_ab7c578a96444bf101662a93f1d8fcb13}{\_nb\_particles}};}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnivers_a529e4863f1cb2fe56d34887acd14adfa}{\_dim}};}
+\DoxyCodeLine{48     \mbox{\hyperlink{classVecteur}{Vecteur}} \mbox{\hyperlink{classUnivers_a71db3f1f33bf91b6d54ef822bc94cbd4}{\_Ld}};}
+\DoxyCodeLine{49     \textcolor{keywordtype}{double} \mbox{\hyperlink{classUnivers_a628b7f924010431e6f3a99e92b720fc5}{\_r\_cut}};}
+\DoxyCodeLine{50     std::vector<std::shared\_ptr<Particle>> \mbox{\hyperlink{classUnivers_acbb45b940b4021db119321b15dba1b64}{\_particles}};}
+\DoxyCodeLine{51     \mbox{\hyperlink{classVecteur}{Vecteur}} \mbox{\hyperlink{classUnivers_a273de85519995cec2848d21d2e5e74c1}{\_grid\_size}};}
+\DoxyCodeLine{52     \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnivers_af2f27701837feaaac594506468ef07a3}{\_size}};}
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} \mbox{\hyperlink{classUnivers_abfe768a32bdb2eb9062bb9bfa278ce49}{\_type}}; \textcolor{comment}{// 0 for absorption, 1 for reflexion and 2 for periodic}}
+\DoxyCodeLine{54 \};}
+
+\end{DoxyCode}

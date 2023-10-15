@@ -1,0 +1,25 @@
+\hypertarget{Cell_8hxx_source}{}\doxysection{Cell.\+hxx}
+\label{Cell_8hxx_source}\index{/home/killuamam/Documents/TP\_zakiak\_bourroua/bien/include/Cell.hxx@{/home/killuamam/Documents/TP\_zakiak\_bourroua/bien/include/Cell.hxx}}
+\mbox{\hyperlink{Cell_8hxx}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{Particle_8hxx}{Particle.hxx}}"{}}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classCell}{Cell}}\{}
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{classCell_a394510643e8664cf12b5efaf5cb99f71}{Cell}}();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCell_abda075a5e9a3ed48c85500a58e4a6eeb}{insert\_particle}}(std::shared\_ptr<Particle> particle);}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCell_aa7b88292726f0cf717c787666a05feff}{remove\_particle}}(std::shared\_ptr<Particle> particle);}
+\DoxyCodeLine{20     std::set<std::shared\_ptr<Particle>> \&\mbox{\hyperlink{classCell_a888b1183d5f86d3239085dc8ffa53b58}{getParticles}}();}
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} \mbox{\hyperlink{classCell_a293706c089ee7fd2d99704de5575f5a4}{getNbParticles}}();}
+\DoxyCodeLine{22 \textcolor{keyword}{private}:}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} \mbox{\hyperlink{classCell_a3b4622f3755d85d61318dd409c85c6ba}{\_nb\_particles}} = 0;}
+\DoxyCodeLine{24     std::set<std::shared\_ptr<Particle>> \mbox{\hyperlink{classCell_abd126b32b37f28dadfff49a0fbd18625}{\_particles}};}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 std::ostream \& \mbox{\hyperlink{Cell_8hxx_ac37ec54f4fbb7fcaff0bb0b4cb53af37}{operator<<}}(std::ostream\& , \mbox{\hyperlink{classCell}{Cell}} \&);}
+
+\end{DoxyCode}
